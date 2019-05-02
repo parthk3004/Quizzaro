@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>front hand</title> 
+    
+    <link href="/static/style.css" rel="stylesheet">
+	
+	<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+	
+	
+	
+	
+
+	<style>
+	.head{
+		background-color: white;
+		size: 1px;
+
+	}
+	.btn1 {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn1:hover, .btn1:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+.qn {
+ font-family: 'Merienda';font-size: 36px;
+ color: white;
+}
+#container{
+background-image="/static/images/bg-reapeat2.jpg";
+}
+
+
+	
+
+
+</style>
+</head>
+<body background="/static/images/bg-repeat8.jpg" >
+	<div id="Wrapper">
+		<br><br><br><br><br><br><br><br><br>
+
+    	<div id="container" align="center">
+	    	<div class="row" align="center" style="height: 200px;">
+
+					<div>
+                        <div class="gallery">
+                        	<br><br>
+						<br>
+						
+							<div class='btns'>
+      <label>
+        <input  name='q' type='radio' value="{{op1}}" required>
+          <span class='btn first'>Strongly Disagree</span>
+        </input>
+      </label>
+      <label>
+        <input name='q' type='radio' value="{{op2}}">
+          <span class='btn'>Disagree</span>
+        </input>
+      </label>
+      <label>
+        <input name='q' type='radio' value="{{op3}}">
+          <span class='btn'>Maybe</span>
+        </input>
+      </label>
+      <label>
+        <input name='q' type='radio' value="{{op4}}">
+          <span class='btn'>Agree</span>
+        </input>
+      </label>
+      <label>
+        <input name='q' type='radio' value="{{op5}}">
+          <span class='btn last'>Strongly Agree</span>
+        </input>
+      </label>
+    </div>
+								<input type = "hidden" name = "trait" value = "{{trait}}"> <br>
+								<input type = "hidden" name = "qno" value = "{{qno}}"> <br>
+								
+							</div>
+			
+
+                    
+                    
+           
+            <button  align='right' class="btn1 first"  >Next</button>
+
+        <br>
+		</div>
+
+</div>
+</div>
+</div>
+<br>
+<br><br><br>
+<br><br><br><br><br><br><br>
+<div class="head"><center>
+
+	</center>
+	</div>
+	</div>
+</body>
+</html>
