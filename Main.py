@@ -34,6 +34,15 @@ optn5=[]	#Array of Option 5
 trait=[]	#Array of Trait(Extraversion, Agreeableness, Conscientiousness, Emotional Stability, Intellect )
 
 #Reading ALL Values of from file in array format:
+for i in range (qnlenth):
+	qnnumber=np.append(qnnumber,(sheet.cell_value(i, 0) ))
+	qnlist=np.append(qnlist,(sheet.cell_value(i, 1) ))
+	optn1=np.append(optn1,(sheet.cell_value(i, 2) ))
+	optn2=np.append(optn2,(sheet.cell_value(i, 3) ))
+	optn3=np.append(optn3,(sheet.cell_value(i, 4) ))
+	optn4=np.append(optn4,(sheet.cell_value(i, 5) ))
+	optn5=np.append(optn5,(sheet.cell_value(i, 6) ))
+	trait=np.append(trait,(sheet.cell_value(i, 7) ))
 
 from flask import Flask, redirect, url_for, request ,render_template
 app = Flask(__name__) 
@@ -258,7 +267,7 @@ def result():
     encoded = fig_to_base64(fig)
 
         
-    return render_template('predict.html', var=y_pred[0],A=ar,O=oro,N=nr,C=cr,E=er,Ge=G, graph_data )
+    return render_template('predict.html', var=y_pred[0],A=ar,O=oro,N=nr,C=cr,E=er,Ge=G, graph_data = line_chart )
     
 
 
@@ -269,3 +278,6 @@ def result():
 
 #training data and prediction algorithm
 
+if __name__ == '__main__': 
+	app.run(debug = True)
+    
